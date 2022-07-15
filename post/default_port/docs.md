@@ -12,7 +12,7 @@ nest js 에서 기본 port 세팅 방법
 
 ```ts
 import {Module} from '@nestjs/common';
-import {AppResource} from './web/AppResource';
+import {AppController} from './web/AppController';
 import {AppService} from './service/AppService';
 
 import {ConfigModule} from '@nestjs/config';
@@ -24,7 +24,7 @@ import configuration from './config/configuration';
             load: [configuration],
         }),
     ],
-    controllers: [AppResource],
+    controllers: [AppController],
     providers: [AppService],
 })
 export class AppModule {
@@ -35,7 +35,7 @@ export class AppModule {
 
 ```ts
 import {Module} from '@nestjs/common';
-import {AppResource} from './web/AppResource';
+import {AppController} from './web/AppController';
 import {AppService} from './service/AppService';
 
 import {ConfigModule} from '@nestjs/config';
@@ -47,7 +47,7 @@ import configuration from './config/configuration';
             load: [configuration],
         }),
     ],
-    controllers: [AppResource],
+    controllers: [AppController],
     providers: [AppService],
 })
 export class AppModule {
