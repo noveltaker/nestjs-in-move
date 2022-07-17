@@ -8,6 +8,11 @@ export class UserController {
 
   @Get('users')
   async getUsers(): Promise<User[]> {
-    return this.userService.findByAll();
+    const data = this.userService.findByAll();
+    return Object.assign({
+      status: 200,
+      message: '유저 전체 조회',
+      data: data,
+    });
   }
 }
